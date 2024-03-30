@@ -63,7 +63,6 @@ def draw_queue_area(image, boxes):
     std_deviation = statistics.stdev(aver_boxes)
     ny_boxes = [s_boxes[x] for x in range(len(aver_boxes)) if abs(aver_boxes[x] - mean_value) <= std_deviation*0.5 ]
     abc = len(ny_boxes)
-    acb = ny_boxes
     ny_boxes = np.array(ny_boxes,dtype=np.int32)
     ny_boxes = ny_boxes.reshape((-1,1,2))
     if(len(ny_boxes)>6):
